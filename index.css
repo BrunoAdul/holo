@@ -677,10 +677,7 @@ main, footer {
   10% {
     transform: translateY(-100%); /* Move the image up completely */
   }
-  50% {
-    transform: translateY(-100%); /* Hold the image off-screen */
-  }
-  60% {
+  40% {
     transform: translateY(0); /* Return to the starting position */
   }
   100% {
