@@ -16,18 +16,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    const backgroundContainer = document.getElementById("sliding-background");
-  
-    // Array of background image URLs
-    const images = ["img/blue_footer_banner.png", "img/blue_footer_banner.png"];
-  
-    // Dynamically create img elements for each image
-    images.forEach((src) => {
-      const img = document.createElement("img");
-      img.src = src;
-      img.alt = "Sliding background image";
-      backgroundContainer.appendChild(img);
-    });
-  });
+
   
