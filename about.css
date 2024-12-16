@@ -163,11 +163,6 @@ main, footer {
   }
 }
 
-
-
-
-
-
 /*ABOUT US STYLYNG*/
 #Frame_36ab p {
   font-size: 40px; /* Adjust the font size here */
@@ -176,11 +171,6 @@ main, footer {
   border-bottom: 2px solid #166D95; /* Adds a line below with the same color */
   padding-bottom: 10px; /* Optional: Adjust spacing between text and the line */
 }
-
-
-
-
-
 
 .about-container {
   display: flex;
@@ -205,10 +195,6 @@ main, footer {
 }
 
 
-
-
-
-
 .ablogo-container {
   display: flex;
   justify-content: center; /* Center align the container */
@@ -220,8 +206,6 @@ main, footer {
   height: 50px; /* Adjust as needed */
   width: auto;  /* Maintain aspect ratio */
 }
-
-
 
 .vision-container {
     margin: 0 auto; /* Center the container */
@@ -553,10 +537,6 @@ button:hover {
 .values-content .right-paragraph {
   margin-top: 20px; /* Adds spacing between elements */
 }
-
-
-
-
 
 /* Banner container */
 #innovation-banner {
