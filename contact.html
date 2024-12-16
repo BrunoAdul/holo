@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <title>Holo</title>
+</head>
+<body>
+    <div id="slideout-menu" aria-hidden="true">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">OUR STORY</a></li>
+            <li><a href="entitiies.html">OUR ENTITIES</a></li>
+            <li><a href="team.html">TEAM</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </div>
+    
+    <nav>
+        <div id="logo-img">
+            <a href="#" aria-label="Holo Logo">
+                <img src="img/logo.png" alt="Holo Logo">
+            </a>
+        </div>
+        <div id="menu-icon" aria-label="Toggle Menu" role="button" tabindex="0">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="desktop-menu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">OUR STORY</a></li>
+            <li><a href="entities.html">OUR ENTITIES</a></li>
+            <li><a href="team.html">TEAM</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+    
+    <div id="banner">
+        <h1>Contact Us</h1>
+    </div>
+
+    <script>
+        document.getElementById('menu-icon').addEventListener('click', function () {
+            var menu = document.getElementById('slideout-menu');
+            menu.classList.toggle('active');
+            menu.setAttribute('aria-hidden', menu.classList.contains('active') ? 'false' : 'true');
+        });
+    </script>
+
+
+
+<!-- About Section -->
+<div id="Frame_36en">
+    <p>Make a Difference Today—Support <br>Holo Healthcare Foundation</p>
+</div>
+
+
+<div class="button-container">
+    <a href="" class="donation-button">MAKE A DONATION</a>
+</div>
+
+
+
+
+<div class="paragraph-container">
+    <p>Your donation can change lives. By giving to Holo<br>
+         Healthcare Foundation, you help provide essential <br>
+         healthcare, education, and support to those who need it <br>
+         most. Together, we can build healthier communities and<br>
+          create a brighter future for all. Every contribution counts—join<br>
+           us in making an impact.</p>
+</div>
+
+
+
+
+<!-- HTML Structure -->
+<div class="contact-container">
+    <!-- Left Aligned Text Block -->
+    <div class="text-block">
+      <div>
+        <strong>Telephone</strong>
+        <div>+229 65 56 76 87 78</div>
+      </div>
+  
+      <div>
+        <strong>Office</strong>
+        <div>235576 PO Box Nairobi</div>
+        <div>Lot 3354 Calavi Bénin</div>
+      </div>
+  
+      <div>
+        <strong>Social Media</strong>
+        <div>Facebook</div>
+        <div>LinkedIn</div>
+        <div>YouTube</div>
+      </div>
+    </div>
+  
+    <!-- Contact Form -->
+    <form class="contact-form">
+      <div class="form-row">
+        <label>
+          What’s your name?
+          <input type="text" />
+        </label>
+        <label>
+          What’s your organization?
+          <input type="text" />
+        </label>
+      </div>
+  
+      <div class="form-row">
+        <label>
+          What’s your email?
+          <input type="email" />
+        </label>
+        <label>
+          What’s your subject?
+          <input type="text" />
+        </label>
+      </div>
+  
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  
+  <!-- CSS -->
+  <style>
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      color: #166D95;
+      font-family: Arial, sans-serif;
+    }
+  
+    .text-block {
+      margin-right: 50px;
+      flex: 1 1 300px;
+      text-align: center;
+    }
+  
+    .text-block div {
+      margin-bottom: 15px;
+    }
+  
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      flex: 2 1 300px;
+    }
+  
+    .form-row {
+      display: flex;
+      gap: 10px;
+    }
+  
+    .form-row label {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .contact-form input {
+      border: none;
+      border-bottom: 1px solid #166D95;
+      padding: 5px;
+      outline: none;
+    }
+  
+    .contact-form button {
+      background-color: #166D95;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      align-self: flex-start;
+    }
+  
+    @media (max-width: 768px) {
+      .form-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+
+
+<footer class="footer">
+    <!-- Footer Title and Contact -->
+    <div class="footer-header">
+        <h1 class="footer-title">Be part of a transformative <br> movement.</h1>
+        <a href="#contact" class="contact-box">Contact Us</a>
+    </div>
+    
+    <!-- Footer Content: Logo and Links -->
+    <div class="footer-content">
+        <!-- Footer Logo -->
+        <div class="footer-logo">
+            <img src="img/logo.png" alt="Holo Logo">
+        </div>
+    
+        <!-- Footer Links -->
+        <div class="footer-links">
+            <div class="entities">
+                <h2>Our Entities</h2>
+                <ul>
+                    <li><a href="#">Holo Healthcare Clinics</a></li>
+                    <li><a href="#">Holo Healthcare Foundation</a></li>
+                    <li><a href="#">Holo Global Health Research Institute</a></li>
+                    <li><a href="#">Health Data Acumen</a></li>
+                </ul>
+            </div>
+            <div class="social-medias">
+                <h2>Our Social Medias</h2>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sliding Background -->
+    <div id="sliding-background"></div>
+    </footer>
+    
+    
+    <!-- JavaScript File -->
+    <script src="footer.js"></script>
+    </footer>
+    
+    
+    </body>
+    <script> src="main.js"</script>
+    </html>
+    

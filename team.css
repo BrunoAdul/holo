@@ -1,0 +1,554 @@
+* General link styles */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation */
+nav {
+  height: 72px;
+  background: transparent;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+nav a {
+  padding: 0 16px;
+  color: white;
+  transition: 0.4s;
+}
+
+nav a:hover {
+  color: #166D95;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+#logo-img {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+#logo-img img {
+  height: 50px;
+  width: auto;
+}
+
+/* Menu Icon */
+#menu-icon {
+  display: none;
+  font-size: 28px;
+  color: #eee;
+  cursor: pointer;
+}
+
+/* Slideout Menu */
+#slideout-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#slideout-menu.active {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#slideout-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#slideout-menu ul li {
+  margin: 16px 0;
+}
+
+#slideout-menu a {
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s;
+  text-align: center;
+}
+
+#slideout-menu a:hover {
+  color: #166D95;
+}
+
+/* Banner */
+#banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5) url("img/banner.jpeg") no-repeat center center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  z-index: 50;
+}
+
+/* Ensure banner and other content don't overlap the menu */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+main, footer {
+  z-index: 10;
+  position: relative;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  #menu-icon {
+    display: flex;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  #logo-img img {
+    height: 40px;
+  }
+
+  #slideout-menu a {
+    font-size: 18px;
+  }
+
+  #banner {
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+
+
+  /*ABOUT US STYLYNG*/
+  #Frame_36en p {
+    font-size: 50px; /* Adjust the font size here */
+    text-align: center;
+    color: #166D95;
+    border-bottom: 2px solid #166D95; /* Adds a line below with the same color */
+    padding-bottom: 10px; /* Optional: Adjust spacing between text and the line */
+  }
+
+
+  .image-container {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .images img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%; /* Optional for circular images */
+    margin: 10px; /* Space between images */
+  }
+  
+  .line {
+    width: 100%; /* Full width of the container */
+    height: 4px;
+    background-color: #166D95;
+    margin: 20px auto;
+  }
+  
+  .captions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Allow captions to wrap on smaller screens */
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .captions p {
+    font-size: 16px;
+    color: #166D95;
+    text-align: center;
+    margin: 10px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .images img {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .captions p {
+      font-size: 14px;
+    }
+  }
+
+
+
+  
+/* Scoped General Layout */
+.frame-parent {
+    display: flex;
+    flex-direction: column; /* Stack sections vertically by default */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    width: 100%;
+    gap: 40px; /* Space between sections */
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+/* Scoped Section Styles */
+.frame-parent .info-section {
+    position: relative; /* Needed for absolute positioning of images */
+    width: 90%; /* Responsive width */
+    max-width: 500px; /* Limit width on larger screens */
+    text-align: center; /* Center-align text */
+    margin: 0 auto; /* Center section in container */
+}
+
+/* Scoped Heading Styles */
+.frame-parent .info-heading {
+    margin: 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #166D95;
+    background-color: white;
+    padding: 20px;
+    position: relative; /* Needed for positioning the underline */
+    z-index: 2; /* Ensure text stays above the image */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Scoped Underline (Retained only on hover) */
+.frame-parent .info-heading::after {
+    content: "";
+    position: absolute;
+    left: 50%; /* Center underline */
+    bottom: -5px; /* Adjust for spacing below text */
+    width: 100%;
+    height: 2px;
+    background-color: #166D95; /* Same as initial text color */
+    transform: translateX(-50%) scaleX(0); /* Start with scale 0 (hidden) */
+    transform-origin: left; /* Start scaling from the left */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Scoped Hover Effect on Heading */
+.frame-parent .info-heading:hover {
+    transform: translateX(-100%); /* Move text completely to the left */
+    color: #0B3954;
+}
+
+/* Scoped Underline on Hover */
+.frame-parent .info-heading:hover::after {
+    background-color: #0B3954; /* Match hover text color */
+    transform: scaleX(1); /* Show the underline when hovered */
+}
+
+/* Scoped Image Container */
+.frame-parent .image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; /* Ensure the image container covers the entire area */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Hide image until hover */
+}
+
+/* Scoped Hover Image Styles */
+.frame-parent .hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ensure the image container covers the entire area */
+    object-fit: contain; /* Prevent cropping and fit the image within the container */
+    opacity: 0; /* Initially hide the image */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1; /* Place image below the text */
+}
+
+/* Scoped Show Image on Hover */
+.frame-parent .info-heading:hover + .image-container .hover-image {
+    opacity: 1; /* Make image visible */
+}
+
+/* Scoped Horizontal Divider */
+.frame-parent .property-1default-child {
+    width: 100%;
+    max-width: 500px; /* Restrict width for responsiveness */
+    border-top: 1px solid #166D95;
+    margin-top: 20px;
+}
+
+/* Scoped Tracker Styles */
+.frame-parent .tracker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: #6C845F;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+/* Scoped Responsive Adjustments */
+@media (min-width: 768px) {
+    .frame-parent {
+        flex-direction: row; /* Align sections side by side on larger screens */
+        gap: 60px; /* Increase spacing */
+    }
+
+    .frame-parent .info-section {
+        width: 45%; /* Each section takes up 45% of the available width */
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .frame-parent .info-heading {
+        font-size: 20px; /* Adjust text size for smaller screens */
+    }
+
+    .frame-parent .hover-image {
+        width: 120px; /* Reduce image size on smaller screens */
+    }
+}
+
+
+
+/* Fix for the last div container to avoid overlap */
+.property-1default {
+    margin-bottom: 40px; /* Add margin below to create space between the sections */
+    padding-bottom: 20px; /* Optional: padding for extra space */
+  }
+  
+  .innovation-section {
+    position: relative; /* Ensure proper stacking */
+    z-index: 1; /* Ensure it's not above other content */
+  }
+  
+  /* General Footer Styles */
+  footer {
+    position: relative;
+    color: white;
+    padding: 20px;
+    background-color: transparent; /* Fallback color */
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Let the height adjust automatically */
+    overflow: visible; /* Allow content to expand the container */
+  }
+  
+  /* Header Container for Title and Contact Button */
+  .footer-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align content to the right */
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .footer-title {
+    font-size: 2.5rem; /* Use relative font sizes for responsiveness */
+    margin-bottom: 10px; /* Spacing between title and contact button */
+    text-align: right; /* Align text to the right */
+  }
+  
+  .contact-box {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem; /* Relative units for font size */
+    align-self: flex-end; /* Align button to the right */
+    border: 2px solid white; /* Add border with the desired color */
+  }
+  
+  .contact-box:hover {
+    background-color: #166d95; /* Add hover effect to change background color */
+    color: white; /* Ensure text remains visible on hover */
+  }
+  
+  /* Footer Content */
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap if they don't fit in a single row */
+    justify-content: space-between;
+    align-items: center; /* Align logo and links on the same plane */
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  /* Footer Logo */
+  .footer-logo {
+    align-self: flex-start;
+  }
+  
+  .footer-logo img {
+    max-width: 100%; /* Make the logo responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Footer Links Layout */
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap; /* Allow link sections to wrap if needed */
+    justify-content: flex-start; /* Retain original alignment */
+    gap: 40px; /* Space between link sections */
+    align-items: center; /* Align to the same axis as the logo */
+  }
+  
+  /* Link List Styling */
+  .footer-links div {
+    text-align: left;
+  }
+  
+  .footer-links h2 {
+    font-size: 1.125rem; /* Use relative font sizes */
+    text-decoration: underline;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links ul li {
+    margin: 5px 0;
+  }
+  
+  .footer-links ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-links ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Sliding Background */
+  #sliding-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover; /* Ensure full background coverage */
+    background-position: center; /* Center the background image */
+    transition: background-image 1s ease-in-out;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .footer-title {
+      font-size: 2rem; /* Adjust title size for smaller screens */
+    }
+  
+    .contact-box {
+      font-size: 0.9rem; /* Adjust font size */
+    }
+  
+    .footer-links {
+      gap: 20px; /* Reduce gap for smaller screens */
+    }
+  
+    .footer-links h2 {
+      font-size: 1rem; /* Adjust font size for headings */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-title {
+      font-size: 1.5rem; /* Further adjust title size */
+    }
+  
+    .contact-box {
+      font-size: 0.8rem; /* Adjust button font size */
+      padding: 8px 16px; /* Adjust padding */
+    }
+  
+    .footer-links h2 {
+      font-size: 0.9rem; /* Further adjust heading size */
+    }
+  
+    .footer-links ul li {
+      margin: 3px 0; /* Reduce margin between links */
+    }
+  }
+  
+  
+  
+  

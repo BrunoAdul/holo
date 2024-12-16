@@ -1,0 +1,435 @@
+/* General link styles */
+a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Navigation */
+  nav {
+    height: 72px;
+    background: transparent;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+    z-index: 1000;
+  }
+  
+  nav a {
+    padding: 0 16px;
+    color: white;
+    transition: 0.4s;
+  }
+  
+  nav a:hover {
+    color: #166D95;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  
+  /* Logo */
+  #logo-img {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+  }
+  
+  #logo-img img {
+    height: 50px;
+    width: auto;
+  }
+  
+  /* Menu Icon */
+  #menu-icon {
+    display: none;
+    font-size: 28px;
+    color: #eee;
+    cursor: pointer;
+  }
+  
+  /* Slideout Menu */
+  #slideout-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  #slideout-menu.active {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  #slideout-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #slideout-menu ul li {
+    margin: 16px 0;
+  }
+  
+  #slideout-menu a {
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s;
+    text-align: center;
+  }
+  
+  #slideout-menu a:hover {
+    color: #166D95;
+  }
+  
+  /* Banner */
+#banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5) url("img/banner.jpeg") no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    z-index: 50;
+  }
+
+
+   /* Ensure banner and other content don't overlap the menu */
+   html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  main, footer {
+    z-index: 10;
+    position: relative;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .desktop-menu {
+      display: none;
+    }
+  
+    #menu-icon {
+      display: flex;
+    }
+  
+    nav ul {
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #logo-img img {
+      height: 40px;
+    }
+  
+    #slideout-menu a {
+      font-size: 18px;
+    }
+  
+    #banner {
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  
+
+
+
+
+
+ /*ABOUT US STYLYNG*/
+ #Frame_36en p {
+    font-size: 50px; /* Adjust the font size here */
+    text-align: center;
+    color: #166D95;
+    border-bottom: 2px solid #166D95; /* Adds a line below with the same color */
+    padding-bottom: 10px; /* Optional: Adjust spacing between text and the line */
+  }
+
+
+
+.button-container {
+    text-align: left; /* Ensures the button is aligned to the left */
+    padding: 20px; /* Optional padding around the button */
+}
+
+.donation-button {
+    display: inline-block;
+    color: #166D95;
+    text-decoration: none;
+    border: 2px solid #166D95;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.donation-button:hover {
+    background-color: #166D95;
+    color: #fff;
+}
+
+.donation-button:focus {
+    outline: none;
+}
+
+
+.paragraph-container {
+    text-align: center;
+    color: #166D95;
+    padding: 20px;
+}
+
+.paragraph-container p {
+    font-size: 16px;
+    margin: 0 auto;
+  
+    
+    
+    .contact-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: 20px auto;
+      }
+      
+      .contact-info {
+        flex: 1;
+        margin-right: 20px;
+      }
+      
+      .contact-form {
+        flex: 2;
+      }
+      
+      /* Form styles */
+      .contact-form form {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .form-row {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+      }
+      
+      label {
+        margin-bottom: 5px;
+        font-size: 14px;
+      }
+      
+      input {
+        padding: 8px;
+        border: 1px solid #166D95;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+      
+      .submit-btn {
+        background-color: #166D95;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      
+      .submit-btn:hover {
+        background-color: #125a75;
+      }
+
+
+
+
+      
+/* General Footer Styles */
+footer {
+    position: relative;
+    color: white;
+    padding: 20px;
+    background-color: transparent; /* Fallback color */
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Let the height adjust automatically */
+    overflow: visible; /* Allow content to expand the container */
+  }
+  
+  /* Header Container for Title and Contact Button */
+  .footer-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align content to the right */
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .footer-title {
+    font-size: 2.5rem; /* Use relative font sizes for responsiveness */
+    margin-bottom: 10px; /* Spacing between title and contact button */
+    text-align: right; /* Align text to the right */
+  }
+  
+  .contact-box {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem; /* Relative units for font size */
+    align-self: flex-end; /* Align button to the right */
+    border: 2px solid white; /* Add border with the desired color */
+  }
+  
+  .contact-box:hover {
+    background-color: #166d95; /* Add hover effect to change background color */
+    color: white; /* Ensure text remains visible on hover */
+  }
+  
+  /* Footer Content */
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap if they don't fit in a single row */
+    justify-content: space-between;
+    align-items: center; /* Align logo and links on the same plane */
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  /* Footer Logo */
+  .footer-logo {
+    align-self: flex-start;
+  }
+  
+  .footer-logo img {
+    max-width: 100%; /* Make the logo responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Footer Links Layout */
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap; /* Allow link sections to wrap if needed */
+    justify-content: flex-start; /* Retain original alignment */
+    gap: 40px; /* Space between link sections */
+    align-items: center; /* Align to the same axis as the logo */
+  }
+  
+  /* Link List Styling */
+  .footer-links div {
+    text-align: left;
+  }
+  
+  .footer-links h2 {
+    font-size: 1.125rem; /* Use relative font sizes */
+    text-decoration: underline;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links ul li {
+    margin: 5px 0;
+  }
+  
+  .footer-links ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-links ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Sliding Background */
+  #sliding-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover; /* Ensure full background coverage */
+    background-position: center; /* Center the background image */
+    transition: background-image 1s ease-in-out;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .footer-title {
+      font-size: 2rem; /* Adjust title size for smaller screens */
+    }
+  
+    .contact-box {
+      font-size: 0.9rem; /* Adjust font size */
+    }
+  
+    .footer-links {
+      gap: 20px; /* Reduce gap for smaller screens */
+    }
+  
+    .footer-links h2 {
+      font-size: 1rem; /* Adjust font size for headings */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-title {
+      font-size: 1.5rem; /* Further adjust title size */
+    }
+  
+    .contact-box {
+      font-size: 0.8rem; /* Adjust button font size */
+      padding: 8px 16px; /* Adjust padding */
+    }
+  
+    .footer-links h2 {
+      font-size: 0.9rem; /* Further adjust heading size */
+    }
+  
+    .footer-links ul li {
+      margin: 3px 0; /* Reduce margin between links */
+    }
+  }
+  
+  
+  
+  

@@ -1,0 +1,852 @@
+/* General link styles */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation */
+nav {
+  height: 72px;
+  background: transparent;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+nav a {
+  padding: 0 16px;
+  color: white;
+  transition: 0.4s;
+}
+
+nav a:hover {
+  color: #166D95;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+#logo-img {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+#logo-img img {
+  height: 50px;
+  width: auto;
+}
+
+/* Menu Icon */
+#menu-icon {
+  display: none;
+  font-size: 28px;
+  color: #eee;
+  cursor: pointer;
+}
+
+/* Slideout Menu */
+#slideout-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#slideout-menu.active {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#slideout-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#slideout-menu ul li {
+  margin: 16px 0;
+}
+
+#slideout-menu a {
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s;
+  text-align: center;
+}
+
+#slideout-menu a:hover {
+  color: #166D95;
+}
+
+/* Banner */
+#banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5) url("img/banner.jpeg") no-repeat center center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  z-index: 50;
+}
+
+/* Ensure banner and other content don't overlap the menu */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+main, footer {
+  z-index: 10;
+  position: relative;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  #menu-icon {
+    display: flex;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  #logo-img img {
+    height: 40px;
+  }
+
+  #slideout-menu a {
+    font-size: 18px;
+  }
+
+  #banner {
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+
+
+
+
+
+/*ABOUT US STYLYNG*/
+#Frame_36ab p {
+  font-size: 40px; /* Adjust the font size here */
+  text-align: right;
+  color: #166D95;
+  border-bottom: 2px solid #166D95; /* Adds a line below with the same color */
+  padding-bottom: 10px; /* Optional: Adjust spacing between text and the line */
+}
+
+
+
+
+
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  color: #166D95;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 10px;
+  margin-right: 20px;
+}
+
+.paragraph {
+  font-size: var(--paragraph-font-size, 16px);
+  text-align: right;
+  max-width: 60%;
+}
+
+
+
+
+
+
+.ablogo-container {
+  display: flex;
+  justify-content: center; /* Center align the container */
+  align-items: center; /* Vertically center the items */
+  gap: 10px; /* Space between the images */
+}
+
+.ablogo {
+  height: 50px; /* Adjust as needed */
+  width: auto;  /* Maintain aspect ratio */
+}
+
+
+
+.vision-container {
+    margin: 0 auto; /* Center the container */
+    color: #166D95;
+    width: 100%; /* Make the container take the full width */
+    text-align: left; /* Align all text and inline content to the left */
+}
+
+h1 {
+    font-size: 3rem; /* Increase heading size */
+    margin-bottom: 2rem;
+    text-align: left; /* Align heading text to the left */
+}
+
+.content {
+    font-size: 1.5rem; /* Scale font size proportionally */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; /* Spread content evenly */
+    gap: 2rem;
+    margin-bottom: 2rem;
+    width: 100%; /* Ensure full-width content */
+}
+
+.content p {
+    flex: 1 1 auto; /* Allow paragraphs to grow and shrink */
+    margin: 0;
+    padding: 0 1rem; /* Add padding for spacing */
+    font-size: 1.8rem; /* Increase font size */
+    line-height: 2; /* Adjust line height for readability */
+    text-align: center; /* Center-align text */
+}
+
+.content img {
+    width: 20%; /* Make image take a percentage of the width */
+    max-width: 300px; /* Prevent images from growing too large */
+    height: auto;
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+hr {
+    margin: 2rem 0;
+    border: none;
+    border-top: 2px solid #166D95;
+}
+
+.boni {
+    margin-top: 2rem;
+}
+
+.boni-text-button {
+    display: flex;
+    align-items: center; /* Vertically align text and button */
+    justify-content: space-between; /* Space paragraph and button apart */
+    width: 100%;
+}
+
+.boni-text-button p {
+    margin: 0;
+    font-size: 1.5rem; /* Adjust font size */
+    text-align: left; /* Align text to the left */
+    flex: 1; /* Allow paragraph to take up remaining space */
+}
+
+.boni-text-button button {
+    background-color: white; /* White background for the button */
+    color: #166D95; /* Bluish text */
+    border: 2px solid #166D95; /* Bluish border */
+    padding: 0.75rem 1.5rem;
+    font-size: 1.5rem; /* Adjust font size for the button */
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+}
+
+button:hover {
+    background-color: #166D95; /* Bluish background on hover */
+    color: white; /* White text on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 2.5rem; /* Reduce title font size on smaller screens */
+    }
+
+    .content p {
+        font-size: 1.4rem; /* Adjust paragraph font size */
+    }
+
+    .content img {
+        width: 25%; /* Adjust image size for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Stack text and image vertically */
+        align-items: center; /* Center stacked items */
+    }
+
+    .content img {
+        width: 40%; /* Further reduce image size for smaller screens */
+    }
+
+    .boni-text-button {
+        flex-direction: column; /* Stack text and button vertically */
+        align-items: stretch;
+    }
+
+    .boni-text-button button {
+        width: 100%; /* Full-width button for smaller screens */
+        margin-top: 1rem;
+    }
+
+    button {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Leadership Container */
+.leadership-container {
+  position: relative; /* Keeps it relative to the parent container */
+  height: 70vh;
+  background: url('img/blue.png') no-repeat center center, #123456; /* Fallback color for low-res images */
+  background-size: cover; /* Ensures the background covers the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevents content overflow */
+  box-sizing: border-box; /* Includes padding and border in dimensions */
+  padding: 20px; /* Spacing inside the container */
+  margin: 20px auto; /* Adds spacing around the container */
+  border: 1px solid transparent; /* Optional for debugging layout */
+}
+
+/* Overlay for Contrast */
+.leadership-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* Reduced transparency to keep image details visible */
+  z-index: 0; /* Places it behind content */
+}
+
+.leadership-container > * {
+  position: relative; /* Ensures content is above the overlay */
+  z-index: 1;
+}
+
+/* Overlay container adjustments */
+.overlay {
+  text-align: center;
+  color: white;
+  width: 90%; /* Keeps it responsive */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box; /* Ensures dimensions include padding */
+}
+
+
+
+/* White line separator */
+.white-line {
+  position: absolute; /* Ensures it spans the entire page */
+  left: 0; /* Aligns it to the left edge */
+  width: 100%; /* Covers the full width of the page */
+  height: 2px;
+  background-color: white;
+  margin: 0; /* Removes extra spacing */
+}
+
+/* Content container */
+.content {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 1rem; /* Adds space between items */
+}
+
+/* Call-to-action button */
+.learn-more {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  flex: 1 1 auto; /* Makes it flexible and responsive */
+  max-width: 200px;
+  text-transform: uppercase; /* Uniform button text style */
+  transition: background 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.learn-more:hover {
+  background: white;
+  color: black;
+}
+
+/* Description text */
+.description {
+  max-width: 70%;
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 1.1rem; /* Slightly increased font size */
+  margin: 0;
+  color: #e0e0e0; /* Softer white for readability */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+  flex: 3 1 auto; /* Makes it flexible and responsive */
+}
+
+/* Fix overlapping for .content and .right */
+.content {
+  position: relative; /* Ensures items do not overlap other sections */
+  margin-top: 20px;
+}
+
+.right {
+  font-size: 1.5em;
+  text-align: right;
+  position: relative; /* Removed absolute positioning */
+  right: 0; /* Aligns it properly */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller desktops */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem; /* Adjusted title size */
+  }
+
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+
+  .learn-more {
+    max-width: 100%;
+  }
+
+  .leadership-container {
+    background-size: contain; /* Adjust background size for smaller screens */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem; /* Smaller title size for mobile */
+  }
+
+  .white-line {
+    margin: 0.5rem 0;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .learn-more {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+}
+
+
+
+
+
+/* CSS Code */
+.raison-container {
+  text-align: center; /* Centers the text horizontally */
+  margin: 20px auto;
+}
+
+.raison-container .raison-header {
+  color: #166D95; /* Sets the color */
+  font-size: 2.5em;
+  margin-bottom: 10px; /* Adds spacing below the header */
+  text-align: center;
+}
+
+.raison-container .raison-header::after {
+  content: ""; /* Creates the line */
+  display: block;
+  width: 50%; /* Adjust width as needed */
+  height: 3px;
+  background-color: #166D95;
+  margin: 10px auto; /* Centers the line */
+}
+
+.values-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Aligns text on the same plane */
+  flex-wrap: wrap; /* Ensures content wraps on smaller screens */
+  gap: 20px; /* Adds space between elements */
+}
+
+.values-content .values-header {
+  color: #166D95;
+  margin: 0;
+  text-align: left;
+  flex-basis: 100%; /* Ensures "Our values" spans the width */
+  position: relative; /* For line placement */
+}
+
+
+.values-content .values-paragraph {
+  color: #166D95;
+  text-align: right; /* Aligns paragraph text to the left */
+  flex-basis: 100%; /* Ensures paragraphs are below "Our values" */
+  font-size: 25px;
+  text-indent: 5px;
+}
+
+.values-content .right-paragraph {
+  margin-top: 20px; /* Adds spacing between elements */
+}
+
+
+
+
+
+/* Banner container */
+#innovation-banner {
+  position: relative; /* Relative positioning for the container */
+  text-align: center; /* Center the image horizontally */
+  margin: 0 auto; /* Center the banner on the page */
+  overflow: hidden; /* Contain any absolute positioning inside */
+  padding-top: 20px; /* Add space at the top */
+  margin-bottom: 40px; /* Add space at the bottom */
+  height: 400px; /* Set a fixed height for the banner container */
+}
+
+/* Banner image with animation */
+#innovation-banner img {
+  max-width: 100%; /* Ensure the image does not exceed the width of its container */
+  height: auto; /* Maintain the aspect ratio of the image */
+  display: block; /* Remove any extra space below the image */
+  animation: slideUp 8s ease-in-out infinite; /* Add the sliding animation with a longer duration */
+}
+
+/* Text overlay on the image */
+.innovation-banner-txt {
+  position: absolute; /* Position the text over the image */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for perfect centering */
+  color: white; /* White text color */
+  font-size: 50px; /* Font size as requested */
+  font-weight: bold; /* Make the text bold */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
+  text-transform: uppercase; /* Optional: make the text uppercase */
+  margin: 0; /* Remove default margin if any */
+  z-index: 1; /* Ensure text is above the image */
+}
+
+/* Responsive font sizes */
+@media (max-width: 768px) {
+  .innovation-banner-txt {
+    font-size: 30px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .innovation-banner-txt {
+    font-size: 20px; /* Further adjust for very small screens */
+  }
+}
+
+/* Slide-up animation for the banner image */
+@keyframes slideUp {
+  0% {
+    transform: translateY(0); /* Start from the original position */
+  }
+  50% {
+    transform: translateY(-100%); /* Move the image up completely */
+  }
+  100% {
+    transform: translateY(0); /* Return to the starting position */
+  }
+}
+
+/* Fix for the last div container to avoid overlap */
+.property-1default {
+  margin-bottom: 40px; /* Add margin below to create space between the sections */
+  padding-bottom: 20px; /* Optional: padding for extra space */
+}
+
+.innovation-section {
+  position: relative; /* Ensure proper stacking */
+  z-index: 1; /* Ensure it's not above other content */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Footer Styles */
+footer {
+  position: relative;
+  color: white;
+  padding: 20px;
+  background-color: transparent; /* Fallback color */
+  display: flex;
+  flex-direction: column;
+  height: auto; /* Let the height adjust automatically */
+  overflow: visible; /* Allow content to expand the container */
+}
+
+/* Header Container for Title and Contact Button */
+.footer-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align content to the right */
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.footer-title {
+  font-size: 2.5rem; /* Use relative font sizes for responsiveness */
+  margin-bottom: 10px; /* Spacing between title and contact button */
+  text-align: right; /* Align text to the right */
+}
+
+.contact-box {
+  background-color: transparent;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem; /* Relative units for font size */
+  align-self: flex-end; /* Align button to the right */
+  border: 2px solid white; /* Add border with the desired color */
+}
+
+.contact-box:hover {
+  background-color: #166d95; /* Add hover effect to change background color */
+  color: white; /* Ensure text remains visible on hover */
+}
+
+/* Footer Content */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap if they don't fit in a single row */
+  justify-content: space-between;
+  align-items: center; /* Align logo and links on the same plane */
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Footer Logo */
+.footer-logo {
+  align-self: flex-start;
+}
+
+.footer-logo img {
+  max-width: 100%; /* Make the logo responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Footer Links Layout */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap; /* Allow link sections to wrap if needed */
+  justify-content: flex-start; /* Retain original alignment */
+  gap: 40px; /* Space between link sections */
+  align-items: center; /* Align to the same axis as the logo */
+}
+
+/* Link List Styling */
+.footer-links div {
+  text-align: left;
+}
+
+.footer-links h2 {
+  font-size: 1.125rem; /* Use relative font sizes */
+  text-decoration: underline;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin: 5px 0;
+}
+
+.footer-links ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Sliding Background */
+#sliding-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover; /* Ensure full background coverage */
+  background-position: center; /* Center the background image */
+  transition: background-image 1s ease-in-out;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-title {
+    font-size: 2rem; /* Adjust title size for smaller screens */
+  }
+
+  .contact-box {
+    font-size: 0.9rem; /* Adjust font size */
+  }
+
+  .footer-links {
+    gap: 20px; /* Reduce gap for smaller screens */
+  }
+
+  .footer-links h2 {
+    font-size: 1rem; /* Adjust font size for headings */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-title {
+    font-size: 1.5rem; /* Further adjust title size */
+  }
+
+  .contact-box {
+    font-size: 0.8rem; /* Adjust button font size */
+    padding: 8px 16px; /* Adjust padding */
+  }
+
+  .footer-links h2 {
+    font-size: 0.9rem; /* Further adjust heading size */
+  }
+
+  .footer-links ul li {
+    margin: 3px 0; /* Reduce margin between links */
+  }
+}
+
+
+

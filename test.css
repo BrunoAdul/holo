@@ -1,0 +1,524 @@
+/* General link styles */
+a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Navigation */
+  nav {
+    height: 72px;
+    background: transparent;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+    z-index: 1000;
+  }
+  
+  nav a {
+    padding: 0 16px;
+    color: white;
+    transition: 0.4s;
+  }
+  
+  nav a:hover {
+    color: #166D95;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  
+  /* Logo */
+  #logo-img {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+  }
+  
+  #logo-img img {
+    height: 50px;
+    width: auto;
+  }
+  
+  /* Menu Icon */
+  #menu-icon {
+    display: none;
+    font-size: 28px;
+    color: #eee;
+    cursor: pointer;
+  }
+  
+  /* Slideout Menu */
+  #slideout-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  #slideout-menu.active {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  #slideout-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #slideout-menu ul li {
+    margin: 16px 0;
+  }
+  
+  #slideout-menu a {
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s;
+    text-align: center;
+  }
+  
+  #slideout-menu a:hover {
+    color: #166D95;
+  }
+  
+  /* Banner */
+#banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5) url("img/banner.jpeg") no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    z-index: 50;
+  }
+
+
+   /* Ensure banner and other content don't overlap the menu */
+   html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  main, footer {
+    z-index: 10;
+    position: relative;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .desktop-menu {
+      display: none;
+    }
+  
+    #menu-icon {
+      display: flex;
+    }
+  
+    nav ul {
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #logo-img img {
+      height: 40px;
+    }
+  
+    #slideout-menu a {
+      font-size: 18px;
+    }
+  
+    #banner {
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  
+
+  
+  
+  
+  .about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    color: #166D95;
+  }
+  
+  .title {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 10px;
+    margin-right: 20px;
+  }
+  
+  .paragraph {
+    font-size: var(--paragraph-font-size, 16px);
+    text-align: right;
+    max-width: 60%;
+  }
+  
+
+
+
+  .cursor-tracker {
+    position: absolute;
+    background-color: #3F9909;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: bold;
+    pointer-events: none;
+    text-align: center;
+  }
+  
+  
+  
+  
+  
+  /* Line under the title */
+  #iframe40::after {
+    content: ''; /* Creates an empty content box */
+    position: absolute;
+    top: 100%; /* Places the line completely below the content */
+    left: 0;
+    width: 100%; /* Makes the line span the full width */
+    height: 5px; /* Thickness of the line */
+    background-color: green; /* Blue color */
+    display: block;
+    transition: background-color 0.3s ease-in-out; /* Smooth transition for color changes */
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+  .vision-container {
+    margin-left: auto; /* Push the container to the right */
+    margin-right: 0; /* Align the container with the right edge */
+    color: #166D95;
+    max-width: 600px;
+    text-align: left; /* Align all text and inline content to the left */
+  }
+  
+  h1 {
+    font-size: 20px;
+    margin-bottom: 1.5rem;
+    text-align: left; /* Align heading text to the left */
+  }
+  
+  .content {
+    font-size: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start; /* Align flex items to the left */
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .content p {
+    flex: 1;
+    margin: 0;
+    margin-left: 10px; /* Moves the paragraph 30px to the right */
+    font-size: 1.2rem; /* Slightly larger font for readability */
+    line-height: 1.8; /* Increased line height for better spacing */
+    text-align: left; /* Align text to the left */
+  }
+  
+  
+  .content img {
+    width: 300px; /* Default image size */
+    height: auto;
+    border-radius: 5px; /* Optional: Add rounded corners */
+  }
+  
+  hr {
+    margin: 1.5rem 0;
+    border: none;
+    border-top: 2px solid #166D95;
+  }
+  
+  .boni {
+    margin-top: 1rem;
+  }
+  
+  .boni-text-button {
+    display: flex;
+    align-items: center; /* Vertically align text and button */
+    justify-content: space-between; /* Space paragraph and button apart */
+  }
+  
+  .boni-text-button p {
+    margin: 0;
+    font-size: 1.1rem; /* Adjust font size for consistency */
+    text-align: left; /* Align text to the left */
+    flex: 1; /* Allow paragraph to take up remaining space */
+  }
+  
+  .boni-text-button button {
+    background-color: white; /* White background for the button */
+    color: #166D95; /* Bluish text */
+    border: 2px solid #166D95; /* Bluish border */
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem; /* Adjust font size for the button */
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    align-self: flex-end; /* Align the button to the right */
+  }
+  
+  button:hover {
+    background-color: #166D95; /* Bluish background on hover */
+    color: white; /* White text on hover */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1024px) {
+    h1 {
+      font-size: 2rem; /* Reduce title font size on smaller screens */
+    }
+  
+    .content p {
+      font-size: 1rem; /* Adjust paragraph font size */
+    }
+  
+    .content img {
+      width: 150px; /* Reduce image size for medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column; /* Stack text and image vertically */
+      align-items: flex-start; /* Align stacked items to the left */
+    }
+  
+    .content img {
+      width: 120px; /* Further reduce image size for smaller screens */
+    }
+  
+    .boni-text-button {
+      flex-direction: row; /* Keep text and button on the same plane */
+      justify-content: space-between; /* Maintain alignment of text and button */
+      width: 100%; /* Ensure the full width is used */
+    }
+  
+    .boni-text-button button {
+      width: auto; /* Keep button size dynamic */
+    }
+  
+    button {
+      font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+  }
+  
+  /* Leadership Container */
+  .leadership-container {
+    position: relative; /* Keeps it relative to the parent container */
+    height: 40vh;
+    background: url('img/blue.png') no-repeat center center;
+    background-size: cover; /* Ensures the background covers the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents content overflow */
+    box-sizing: border-box; /* Includes padding and border in dimensions */
+    padding: 20px; /* Spacing inside the container */
+    margin: 20px auto; /* Adds spacing around the container */
+    border: 1px solid transparent; /* Optional for debugging layout */
+  }
+  
+  /* Overlay container adjustments */
+  .overlay {
+    text-align: center;
+    color: white;
+    width: 90%; /* Keeps it responsive */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box; /* Ensures dimensions include padding */
+  }
+  
+  /* Section title */
+  .title {
+    font-size: 2.5rem;
+    margin: 0;
+    word-wrap: break-word; /* Ensures long words break properly */
+  }
+  
+  /* White line separator */
+  .white-line {
+    width: 100%; /* Full-width line */
+    margin: 1rem 0;
+    border: none;
+    height: 2px;
+    background-color: white;
+  }
+  
+  /* Content container */
+  .content {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem; /* Adds space between items */
+  }
+  
+  /* Call-to-action button */
+  .learn-more {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    flex: 1 1 auto; /* Makes it flexible and responsive */
+    max-width: 200px;
+  }
+  
+  /* Description text */
+  .description {
+    max-width: 70%;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 1rem;
+    margin: 0;
+    color: white;
+    flex: 3 1 auto; /* Makes it flexible and responsive */
+  }
+  
+  /* Fix overlapping for .content and .right */
+  .content {
+    position: relative; /* Ensures items do not overlap other sections */
+    margin-top: 20px;
+  }
+  
+  .right {
+    font-size: 1.5em;
+    text-align: right;
+    position: relative; /* Removed absolute positioning */
+    right: 0; /* Aligns it properly */
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* For tablets and smaller desktops */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2rem;
+    }
+  
+    .content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .description {
+      max-width: 100%;
+    }
+  
+    .learn-more {
+      max-width: 100%;
+    }
+  }
+  
+  /* For mobile devices */
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.8rem;
+    }
+  
+    .white-line {
+      margin: 0.5rem 0;
+    }
+  
+    .description {
+      font-size: 0.9rem;
+    }
+  
+    .learn-more {
+      font-size: 0.9rem;
+      padding: 0.5rem;
+    }
+  }
+  
+  /* General container styling */
+  .container {
+    margin: 20px auto; /* Adds spacing and centers the container */
+    padding: 20px;
+    color: #166D95;
+    box-sizing: border-box; /* Ensures proper dimension calculations */
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    text-align: center;
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  h1::after {
+    content: "";
+    display: block;
+    margin: 10px auto 0;
+    width: 50%;
+    height: 2px;
+    background-color: #166D95;
+  }
+  
+  h2 {
+    font-size: 0.5em;
+    text-align: center;
+    margin-top: -400px;
+  }
+  
+
+
+

@@ -1,0 +1,856 @@
+/* General link styles */
+a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Navigation */
+  nav {
+    height: 72px;
+    background: transparent;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+    z-index: 1000;
+  }
+  
+  nav a {
+    padding: 0 16px;
+    color: white;
+    transition: 0.4s;
+  }
+  
+  nav a:hover {
+    color: #166D95;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  
+  /* Logo */
+  #logo-img {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+  }
+  
+  #logo-img img {
+    height: 50px;
+    width: auto;
+  }
+  
+  /* Menu Icon */
+  #menu-icon {
+    display: none;
+    font-size: 28px;
+    color: #eee;
+    cursor: pointer;
+  }
+  
+  /* Slideout Menu */
+  #slideout-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  #slideout-menu.active {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  #slideout-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #slideout-menu ul li {
+    margin: 16px 0;
+  }
+  
+  #slideout-menu a {
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s;
+    text-align: center;
+  }
+  
+  #slideout-menu a:hover {
+    color: #166D95;
+  }
+  
+  /* Banner */
+#banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5) url("img/banner.jpeg") no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    z-index: 50;
+  }
+
+
+   /* Ensure banner and other content don't overlap the menu */
+   html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  main, footer {
+    z-index: 10;
+    position: relative;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .desktop-menu {
+      display: none;
+    }
+  
+    #menu-icon {
+      display: flex;
+    }
+  
+    nav ul {
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #logo-img img {
+      height: 40px;
+    }
+  
+    #slideout-menu a {
+      font-size: 18px;
+    }
+  
+    #banner {
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*ABOUT US STYLYNG*/
+#Frame_36en p {
+    font-size: 50px; /* Adjust the font size here */
+    text-align: left;
+    color: #166D95;
+    border-bottom: 2px solid #166D95; /* Adds a line below with the same color */
+    padding-bottom: 10px; /* Optional: Adjust spacing between text and the line */
+  }
+  
+
+
+  #Frame_36em p {
+    font-size: 50px; /* Adjust the font size here */
+    text-align: center;
+    color: #166D95;
+    border-bottom: 2px solid #166D95; /* Adds a line below with the same color */
+    padding-bottom: 10px; /* Optional: Adjust spacing between text and the line */
+  }
+  
+
+
+
+
+
+
+
+
+
+
+  .title {
+    font-size: 4vw; /* Scales with screen width */
+    font-weight: bold;
+    text-align: left;
+    padding-left: 10px;
+    margin-right: 20px;
+    color: #166D95;
+  }
+  
+  .paragraph {
+    font-size: 2.5vw; /* Scales with screen width */
+    text-align: right;
+    max-width: 90%; /* Adjust for smaller screens */
+    color: #166D95;
+    margin-left: auto; /* Centers content if width is adjusted */
+    margin-right: auto;
+  }
+  
+  /* Adjust for smaller devices */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 6vw; /* Slightly larger for readability */
+      text-align: center; /* Center-align for smaller screens */
+      margin-right: 0;
+    }
+  
+    .paragraph {
+      font-size: 4vw;
+      text-align: center;
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  
+  /* Adjust for extra small devices */
+  @media (max-width: 480px) {
+    .title {
+      font-size: 8vw; /* Even larger for very small screens */
+      padding-left: 0;
+    }
+  
+    .paragraph {
+      font-size: 5vw;
+      max-width: 100%;
+    }
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  /* Heading styles */
+  .innovative-public-health {
+    margin: 0;
+    width: 100%; /* Adjust to take full width */
+    position: relative;
+    font-size: inherit;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: inherit;
+    display: block; /* Ensure it behaves like a block for proper alignment */
+    text-align: left; 
+    line-height: 1.5; /* Adjust for proper spacing */
+    transition: transform 0.3s ease-in-out, text-align 0.3s ease-in-out;
+  }
+  
+  /* Transform and color change on hover */
+  .innovative-public-health:hover {
+    transform: translateX(300px) translateY(0px); /* Adjust to control direction */
+    color: #166D95; /* Change text color on hover */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+  }
+  #hover-image {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 50%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-210%, -50%); /* Center the image */
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.3s ease; /* Smooth fade-in/out */
+  }
+  
+  .innovative-public-health:hover ~ #hover-image,
+  #hover-image:hover {
+    display: block; /* Keep the image displayed on hover */
+    opacity: 1;     /* Make it visible */
+  }
+  
+  /* Ensure #hover-image doesn't block the hover event */
+  #hover-image {
+    display: none;  /* Initially hidden */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; /* Prevents the image from interfering with hover */
+  }
+  
+  
+  .innovative-public-health:hover + .hover-image {
+    visibility: visible; /* Show the image */
+    opacity: 1; /* Fully visible */
+    transition-delay: 10ms; /* No delay for fade-in */
+  }
+  
+  
+  
+  .innovative-public-health-resea-wrapper {
+    margin-left: -701px;
+    height: 150px;
+    width: 382px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 50px 0 0;
+    box-sizing: border-box;
+  }
+  
+  .calque-1,
+  .the-group-excels {
+    position: relative;
+    flex-shrink: 0;
+  }
+  
+  .the-group-excels {
+    height: 138px;
+    width: 582px;
+    display: inline-block;
+  }
+  
+  .calque-1 {
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+  }
+  
+  .calque-1-wrapper,
+  .frame-parent,
+  .research-description {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .calque-1-wrapper {
+    height: 128px;
+    width: 18px;
+    flex-direction: column;
+    padding: 110px 0 0;
+    box-sizing: border-box;
+  }
+  
+  .frame-parent,
+  .research-description {
+    flex-direction: row;
+  }
+  
+  .research-description {
+    height: 138px;
+    width: 634px;
+    gap: 34px;
+    flex-shrink: 0;
+    font-size: 26px;
+  }
+  
+  .frame-parent {
+    width: 1333px;
+    height: 150px;
+    padding: 0 0 0 699px;
+    box-sizing: border-box;
+    gap: 319px;
+    z-index: 2;
+    text-align: left;
+    font-size: 36px;
+    color: #166d95;
+    font-family: Alef;
+  }
+  
+  /* Adjust the blue line to appear below the text */
+  .property-1default-child {
+    width: 1272px;
+    position: relative;
+    border-top: 1px solid #166d95;
+    box-sizing: border-box;
+    height: 1px;
+    margin-top: 8px; /* Add spacing to move it below the text */
+    z-index: 1; /* Ensure it does not overlap the text */
+  }
+  
+  
+  .mask-group-icon {
+    width: 263px;
+    height: 162px;
+    position: absolute;
+    margin: 0 !important;
+    top: -7px;
+    left: -270px;
+    object-fit: cover;
+    z-index: 2;
+  }
+  
+  .property-1default {
+    width: 1333px;
+    height: 182px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 11px 0 0;
+    box-sizing: border-box;
+    position: relative;
+    gap: 21px;
+  }
+  
+  /* Parent container of the tracker */
+  .parent-container {
+    position: relative; /* Makes this container the reference point for absolute positioning */
+    width: 100%; /* Ensure the parent has width */
+    height: auto; /* Ensure height adjusts with content */
+    overflow: visible; /* To ensure the tracker is visible */
+  }
+  /* Tracker styling */
+  .tracker {
+    position: absolute;     /* Positioned relative to its parent container */
+    top: 0;                 /* Initial top position */
+    left: 0;                /* Initial left position */
+    transform: translate(-50%, -50%); /* Centers it based on its size */
+    width: 100px;           /* Set tracker size */
+    height: 100px;
+    background-color: #6c845f; /* Example background color */
+    border-radius: 50%;     /* Make it circular */
+    display: flex;          /* Flexbox for centering content */
+    align-items: center;    /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    font-weight: bold;
+    font-size: 16px;        /* Ensure the text is readable and centered */
+    color: white;           /* Make the text white */
+    pointer-events: none;   /* Prevent interference with mouse events */
+    z-index: 1000;          /* Ensure it overlays correctly */
+  }
+  
+  
+  .hover-image {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 0; /* Position it directly over the text */
+    left: 0; /* Align it to the left */
+    width: auto; /* Allow the width to adapt naturally */
+    height: 100%; /* Match the height of the text container */
+    z-index: 101; /* Ensure it overlays the text */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional semi-transparent background */
+    object-fit: none; /* Remove any fitting behavior that could affect alignment */
+  }
+  
+  
+  .innovative-public-health:hover + .hover-image {
+    display: block; /* Show image on hover */
+  }
+  
+  
+  
+  /* Transition text significantly when image is hovered */
+  .hover-image:hover ~ .innovative-public-health {
+    transform: translateX(-100px); /* Move text significantly toward the center */
+    text-align: center; /* Align the text to the center */
+    transition: transform 0.3s ease-in-out, text-align 0.3s ease-in-out; /* Smooth animation */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+/* Section styling to create clear separation */
+.ablogo-section {
+    width: 100%;                /* Full width of the container */
+    padding: 40px 0;            /* Vertical spacing to separate it from other sections */
+    background-color: transparent;  /* Light background for visual distinction */
+    border-top: 2px solid transparent /* Optional top border for section separation */
+    border-bottom: 2px solid transparent; /* Optional bottom border */
+    text-align: center;         /* Center align content within the section */
+  }
+  
+  /* Container styling for the logos */
+  .ablogo-container {
+    display: flex;
+    justify-content: center;    /* Center images horizontally */
+    flex-wrap: wrap;            /* Allow logos to wrap on smaller screens */
+    gap: 20px;                  /* Space between the images */
+    max-width: 1200px;          /* Limit the width of the container */
+    margin: 0 auto;             /* Center the container */
+  }
+  
+  /* Individual logo styling */
+  .ablogo {
+    width: 120px;               /* Set a fixed width for consistency */
+    height: auto;               /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth effect for hover interactions */
+  }
+  
+  /* Hover effect for logos */
+  .ablogo:hover {
+    transform: scale(1.1);      /* Slightly enlarge the logo on hover */
+  }
+  
+  .ablogo {
+    height: 50px; /* Adjust as needed */
+    width: auto;  /* Maintain aspect ratio */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Banner container */
+  #innovation-banner {
+    position: relative; /* Relative positioning for the container */
+    text-align: center; /* Center the image horizontally */
+    margin: 0 auto; /* Center the banner on the page */
+    overflow: hidden; /* Contain any absolute positioning inside */
+    padding-top: 20px; /* Add space at the top */
+    margin-bottom: 40px; /* Add space at the bottom */
+    height: 400px; /* Set a fixed height for the banner container */
+  }
+  
+  /* Banner image with animation */
+  #innovation-banner img {
+    max-width: 100%; /* Ensure the image does not exceed the width of its container */
+    height: auto; /* Maintain the aspect ratio of the image */
+    display: block; /* Remove any extra space below the image */
+    animation: slideUp 8s ease-in-out infinite; /* Add the sliding animation with a longer duration */
+  }
+  
+  /* Text overlay on the image */
+  .innovation-banner-txt {
+    position: absolute; /* Position the text over the image */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for perfect centering */
+    color: white; /* White text color */
+    font-size: 50px; /* Font size as requested */
+    font-weight: bold; /* Make the text bold */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
+    text-transform: uppercase; /* Optional: make the text uppercase */
+    margin: 0; /* Remove default margin if any */
+    z-index: 1; /* Ensure text is above the image */
+  }
+  
+  /* Responsive font sizes */
+  @media (max-width: 768px) {
+    .innovation-banner-txt {
+      font-size: 30px; /* Adjust font size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .innovation-banner-txt {
+      font-size: 20px; /* Further adjust for very small screens */
+    }
+  }
+  
+  /* Slide-up animation for the banner image */
+  @keyframes slideUp {
+    0% {
+      transform: translateY(0); /* Start from the original position */
+    }
+    50% {
+      transform: translateY(-100%); /* Move the image up completely */
+    }
+    100% {
+      transform: translateY(0); /* Return to the starting position */
+    }
+  }
+  
+  /* Fix for the last div container to avoid overlap */
+  .property-1default {
+    margin-bottom: 40px; /* Add margin below to create space between the sections */
+    padding-bottom: 20px; /* Optional: padding for extra space */
+  }
+  
+  .innovation-section {
+    position: relative; /* Ensure proper stacking */
+    z-index: 1; /* Ensure it's not above other content */
+  }
+  
+
+
+
+
+
+
+
+
+
+
+  
+/* General Footer Styles */
+footer {
+    position: relative;
+    color: white;
+    padding: 20px;
+    background-color: transparent; /* Fallback color */
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Let the height adjust automatically */
+    overflow: visible; /* Allow content to expand the container */
+  }
+  
+  /* Header Container for Title and Contact Button */
+  .footer-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align content to the right */
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .footer-title {
+    font-size: 2.5rem; /* Use relative font sizes for responsiveness */
+    margin-bottom: 10px; /* Spacing between title and contact button */
+    text-align: right; /* Align text to the right */
+  }
+  
+  .contact-box {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem; /* Relative units for font size */
+    align-self: flex-end; /* Align button to the right */
+    border: 2px solid white; /* Add border with the desired color */
+  }
+  
+  .contact-box:hover {
+    background-color: #166d95; /* Add hover effect to change background color */
+    color: white; /* Ensure text remains visible on hover */
+  }
+  
+  /* Footer Content */
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap if they don't fit in a single row */
+    justify-content: space-between;
+    align-items: center; /* Align logo and links on the same plane */
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  /* Footer Logo */
+  .footer-logo {
+    align-self: flex-start;
+  }
+  
+  .footer-logo img {
+    max-width: 100%; /* Make the logo responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Footer Links Layout */
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap; /* Allow link sections to wrap if needed */
+    justify-content: flex-start; /* Retain original alignment */
+    gap: 40px; /* Space between link sections */
+    align-items: center; /* Align to the same axis as the logo */
+  }
+  
+  /* Link List Styling */
+  .footer-links div {
+    text-align: left;
+  }
+  
+  .footer-links h2 {
+    font-size: 1.125rem; /* Use relative font sizes */
+    text-decoration: underline;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links ul li {
+    margin: 5px 0;
+  }
+  
+  .footer-links ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-links ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Sliding Background */
+  #sliding-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover; /* Ensure full background coverage */
+    background-position: center; /* Center the background image */
+    transition: background-image 1s ease-in-out;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .footer-title {
+      font-size: 2rem; /* Adjust title size for smaller screens */
+    }
+  
+    .contact-box {
+      font-size: 0.9rem; /* Adjust font size */
+    }
+  
+    .footer-links {
+      gap: 20px; /* Reduce gap for smaller screens */
+    }
+  
+    .footer-links h2 {
+      font-size: 1rem; /* Adjust font size for headings */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-title {
+      font-size: 1.5rem; /* Further adjust title size */
+    }
+  
+    .contact-box {
+      font-size: 0.8rem; /* Adjust button font size */
+      padding: 8px 16px; /* Adjust padding */
+    }
+  
+    .footer-links h2 {
+      font-size: 0.9rem; /* Further adjust heading size */
+    }
+  
+    .footer-links ul li {
+      margin: 3px 0; /* Reduce margin between links */
+    }
+  }
+  
