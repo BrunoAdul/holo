@@ -9,48 +9,70 @@
     <title>Holo</title>
 </head>
 <body>
-    <div id="slideout-menu" aria-hidden="true">
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">OUR STORY</a></li>
-            <li><a href="entitiies.html">OUR ENTITIES</a></li>
-            <li><a href="team.html">TEAM</a></li>
-            <li><a href="contact.html">CONTACT US</a></li>
-        </ul>
+  <div id="slideout-menu" aria-hidden="true">
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">OUR STORY</a></li>
+        <li><a href="entities.html">OUR ENTITIES</a></li>
+        <li><a href="team.html">TEAM</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li class="language-toggle" id="language-toggle-mobile">EN</li>
+    </ul>
+</div>
+
+<nav>
+    <div id="logo-img">
+        <a href="#" aria-label="Holo Logo">
+            <img src="img/logo.png" alt="Holo Logo">
+        </a>
     </div>
-    
-    <nav>
-        <div id="logo-img">
-            <a href="#" aria-label="Holo Logo">
-                <img src="img/logo.png" alt="Holo Logo">
-            </a>
-        </div>
-        <div id="menu-icon" aria-label="Toggle Menu" role="button" tabindex="0">
-            <i class="fas fa-bars"></i>
-        </div>
-        <ul class="desktop-menu">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">OUR STORY</a></li>
-            <li><a href="entities.html">OUR ENTITIES</a></li>
-            <li><a href="team.html">TEAM</a></li>
-            <li><a href="contact.html">CONTACT US</a></li>
-        </ul>
-    </nav>
-    
-    <div id="banner">
-        <h1>Leadership Team</h1>
+    <div id="menu-icon" aria-label="Toggle Menu" role="button" tabindex="0">
+        <i class="fas fa-bars"></i>
     </div>
+    <ul class="desktop-menu">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">OUR STORY</a></li>
+        <li><a href="entities.html">OUR ENTITIES</a></li>
+        <li><a href="team.html">TEAM</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li class="language-toggle" id="language-toggle-desktop">EN</li>
+    </ul>
+</nav>
+<div id="banner">
+    <h1>Leadership Team</h1>
+    <div id="navigation">
+      <div id="home-link">
+        <a href="index.html"><span class="arrow-left">←</span> HOME</a>
+      </div>
+      <div class="horizontal-line"></div>
+      <div id="scroll-text">
+        <span>SCROLL TO EXPLORE</span>
+        <span class="arrow-right">→</span>
+      </div>
+    </div>
+  </div>
+  
 
-    <script>
-        document.getElementById('menu-icon').addEventListener('click', function () {
-            var menu = document.getElementById('slideout-menu');
-            menu.classList.toggle('active');
-            menu.setAttribute('aria-hidden', menu.classList.contains('active') ? 'false' : 'true');
-        });
-    </script>
+<script>
+    function toggleLanguage(id) {
+        const toggleElement = document.getElementById(id);
+        toggleElement.textContent = toggleElement.textContent === 'EN' ? 'FR' : 'EN';
+    }
 
+    document.getElementById('language-toggle-desktop').addEventListener('click', function () {
+        toggleLanguage('language-toggle-desktop');
+    });
 
+    document.getElementById('language-toggle-mobile').addEventListener('click', function () {
+        toggleLanguage('language-toggle-mobile');
+    });
 
+    document.getElementById('menu-icon').addEventListener('click', function () {
+        var menu = document.getElementById('slideout-menu');
+        menu.classList.toggle('active');
+        menu.setAttribute('aria-hidden', menu.classList.contains('active') ? 'false' : 'true');
+    });
+</script>
 
 <!-- About Section -->
 <div id="Frame_36en">
