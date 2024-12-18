@@ -13,9 +13,10 @@
         <ul>
             <li><a href="index.html">HOME</a></li>
             <li><a href="about.html">OUR STORY</a></li>
-            <li><a href="entitiies.html">OUR ENTITIES</a></li>
+            <li><a href="entities.html">OUR ENTITIES</a></li>
             <li><a href="team.html">TEAM</a></li>
             <li><a href="contact.html">CONTACT US</a></li>
+            <li class="language-toggle" id="language-toggle-mobile">EN</li>
         </ul>
     </div>
     
@@ -34,21 +35,45 @@
             <li><a href="entities.html">OUR ENTITIES</a></li>
             <li><a href="team.html">TEAM</a></li>
             <li><a href="contact.html">CONTACT US</a></li>
+            <li class="language-toggle" id="language-toggle-desktop">EN</li>
         </ul>
     </nav>
     
     <div id="banner">
         <h1>Our Entities</h1>
-    </div>
-
+        <div id="navigation">
+          <div id="home-link">
+            <a href="index.html"><span class="arrow-left">←</span> HOME</a>
+          </div>
+          <div class="horizontal-line"></div>
+          <div id="scroll-text">
+            <span>SCROLL TO EXPLORE</span>
+            <span class="arrow-right">→</span>
+          </div>
+        </div>
+      </div>
+      
+    
     <script>
+        function toggleLanguage(id) {
+            const toggleElement = document.getElementById(id);
+            toggleElement.textContent = toggleElement.textContent === 'EN' ? 'FR' : 'EN';
+        }
+    
+        document.getElementById('language-toggle-desktop').addEventListener('click', function () {
+            toggleLanguage('language-toggle-desktop');
+        });
+    
+        document.getElementById('language-toggle-mobile').addEventListener('click', function () {
+            toggleLanguage('language-toggle-mobile');
+        });
+    
         document.getElementById('menu-icon').addEventListener('click', function () {
             var menu = document.getElementById('slideout-menu');
             menu.classList.toggle('active');
             menu.setAttribute('aria-hidden', menu.classList.contains('active') ? 'false' : 'true');
         });
     </script>
-
 
 
 <!-- About Section -->
@@ -58,14 +83,14 @@
 
 
 <div class="about-container">
-    <div class="title">---Our Entities</div>
+    <div class="title">—Our Entities</div>
     <div class="paragraph">
         Holo Global Health Research Institute is a beacon of,<br>
          innovation in public health. Our experts delve into <br>
          the complexities of non-communicable and ,<br>
          infectious diseases, particularly within Sub-Saharan <br>
          Africa, blending field research with cutting-edge<br>
-          technology. :
+          technology.
     </div>
 </div>
 
