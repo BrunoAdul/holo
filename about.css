@@ -1,3 +1,16 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Prevent Horizontal Scrolling */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* General link styles */
 a {
   text-decoration: none;
@@ -110,6 +123,7 @@ nav ul {
 /* Banner */
 #banner {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -117,219 +131,366 @@ nav ul {
   background-size: cover;
   color: white;
   text-align: center;
+  position: relative;
   z-index: 50;
-}
-
-/* Ensure banner and other content don't overlap the menu */
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
   width: 100%;
 }
 
-main, footer {
-  z-index: 10;
-  position: relative;
+#banner h1 {
+  font-size: 77px;
+  margin: 0;
+  font-weight: bold;
+  color: white;
+  -webkit-text-stroke: 2px white;
+  text-stroke: 2px white;
+  background: none;
+}
+
+/* Navigation Container */
+#navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Home Link */
+#home-link {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#home-link a {
+  color: white;
+  text-decoration: none;
+}
+
+#home-link a:hover {
+  text-decoration: underline;
+}
+
+.arrow-left {
+  font-size: 11px;
+  margin-right: 5px;
+}
+
+/* Horizontal Line */
+.horizontal-line {
+  flex-grow: 1;
+  height: 1px;
+  background: white;
+  margin: 0 20px;
+}
+
+/* Scroll to Explore Text */
+#scroll-text {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+#scroll-text .arrow-right {
+  font-size: 11px;
+  margin-left: 5px;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .desktop-menu {
+  nav ul {
     display: none;
   }
 
   #menu-icon {
-    display: flex;
+    display: block;
   }
 
-  nav ul {
-    flex-wrap: wrap;
+  #banner h1 {
+    font-size: 50px;
+  }
+
+  #navigation {
+    flex-direction: column;
+    bottom: 10px;
+  }
+
+  #home-link,
+  #scroll-text {
+    margin-bottom: 10px;
+  }
+
+  .horizontal-line {
+    margin: 10px 0;
   }
 }
 
-@media (max-width: 480px) {
-  #logo-img img {
-    height: 40px;
-  }
 
-  #slideout-menu a {
-    font-size: 18px;
-  }
 
-  #banner {
-    background-position: center;
-    background-size: cover;
-  }
-}
-
-/*ABOUT US STYLYNG*/
+/* ABOUT US STYLING */
 #Frame_36ab p {
-  font-size: 40px; /* Adjust the font size here */
+  font-size: 60px; /* Default font size for larger screens */
   text-align: right;
   color: #166D95;
   border-bottom: 2px solid #166D95; /* Adds a line below with the same color */
-  padding-bottom: 10px; /* Optional: Adjust spacing between text and the line */
+  padding-bottom: 10px; /* Adjust spacing between text and the line */
+}
+
+/* Medium Devices (Tablets, 768px and above) */
+@media (max-width: 1024px) {
+  #Frame_36ab p {
+    font-size: 50px; /* Reduce font size for tablets */
+  }
+}
+
+/* Small Devices (Phones, 480px and above) */
+@media (max-width: 768px) {
+  #Frame_36ab p {
+    font-size: 40px; /* Further reduce font size for smaller screens */
+    text-align: center; /* Center-align text for better display */
+  }
+}
+
+/* Extra Small Devices (Very small phones, less than 480px) */
+@media (max-width: 480px) {
+  #Frame_36ab p {
+    font-size: 30px; /* Smallest font size for very small devices */
+    text-align: center; /* Center-align text */
+    padding-bottom: 8px; /* Adjust padding for small screens */
+  }
 }
 
 .about-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center;    /* Center align content horizontally */
   padding: 20px;
   color: #166D95;
+  margin: 0 auto;         /* Center the entire container */
+  max-width: 80%;         /* Limit the maximum width */
 }
 
-.title {
-  font-size: 50px;
-  font-weight: bold;
+/* Title Styling */
+.ttitle {
+  font-size: 1rem;
+  font-weight: normal;
   text-align: left;
-  padding-left: 10px;
-  margin-right: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #166D95;
+  align-self: flex-start; /* Align the title to the left */
+  margin-left: 20px;      /* Push the title a few pixels from the left margin */
 }
 
+/* Paragraph Styling */
 .paragraph {
-  font-size: var(--paragraph-font-size, 16px);
-  text-align: right;
-  max-width: 60%;
+  font-size: var(--paragraph-font-size, 1rem);
+  text-align: justify;
+  line-height: 1.6;
+  max-width: 100%;    /* Allow full width for smaller screens */
+  margin-bottom: 20px; /* Space below the paragraph */
 }
 
+/* Constrain width for larger screens */
+@media (min-width: 768px) {
+  .paragraph {
+    max-width: 60%;
+  }
+}
 
+/* Logo Container Styling */
 .ablogo-container {
   display: flex;
-  justify-content: center; /* Center align the container */
-  align-items: center; /* Vertically center the items */
-  gap: 10px; /* Space between the images */
+  justify-content: center; /* Center align the images */
+  align-items: center;
+  gap: 10px;               /* Space between images */
+  width: 100%;             /* Take full width */
+  max-width: 60%;          /* Match paragraph width */
+  flex-wrap: wrap;         /* Wrap logos on smaller screens */
+  margin-bottom: 20px;     /* Add bottom margin */
 }
 
 .ablogo {
-  height: 50px; /* Adjust as needed */
-  width: auto;  /* Maintain aspect ratio */
+  height: 70px;
+  width: auto;
 }
+
+/* Reduce logo size for smaller screens */
+@media (max-width: 768px) {
+  .ablogo {
+    height: 50px;
+  }
+}
+
 
 .vision-container {
-    margin: 0 auto; /* Center the container */
-    color: #166D95;
-    width: 100%; /* Make the container take the full width */
-    text-align: left; /* Align all text and inline content to the left */
+  margin: 0 auto; /* Center the container */
+  color: #166D95;
+  width: 100%; /* Make the container take the full width */
+  text-align: left; /* Align all text and inline content to the left */
+  max-width: 1200px; /* Limit the maximum width */
 }
 
-h1 {
-    font-size: 3rem; /* Increase heading size */
-    margin-bottom: 2rem;
-    text-align: left; /* Align heading text to the left */
+.vision-container h1 {
+  font-size: var(--h1-font-size, 0.5rem); /* Maintain desktop font size */
+  margin-bottom: 2rem;
+  text-align: left;
+  margin-left: 280px; /* Maintain original desktop margin */
+}
+
+/* Mobile adjustments for h1 */
+@media (max-width: 768px) {
+  .vision-container h1 {
+    font-size: var(--h1-font-size, 2rem);
+    margin-left: 1rem; /* Reduce margin for mobile */
+    text-align: center; /* Center heading on mobile */
+  }
 }
 
 .content {
-    font-size: 1.5rem; /* Scale font size proportionally */
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between; /* Spread content evenly */
-    gap: 2rem;
-    margin-bottom: 2rem;
-    width: 100%; /* Ensure full-width content */
+  font-size: var(--content-font-size, 1.5rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
 }
 
 .content p {
-    flex: 1 1 auto; /* Allow paragraphs to grow and shrink */
-    margin: 0;
-    padding: 0 1rem; /* Add padding for spacing */
-    font-size: 1.8rem; /* Increase font size */
-    line-height: 2; /* Adjust line height for readability */
-    text-align: center; /* Center-align text */
+  flex: 1 1 auto;
+  margin: 0;
+  padding: 0 1rem;
+  font-size: var(--paragraph-font-size, 1.8rem);
+  line-height: 2;
+  text-align: justify;
+  margin-left: 260px; /* Maintain original desktop margin */
+  margin-top: -60px;
+}
+
+/* Mobile adjustments for content paragraphs */
+@media (max-width: 768px) {
+  .content p {
+    margin-left: 0; /* Remove left margin for mobile */
+    padding: 0; /* Adjust padding for full-width display */
+    font-size: var(--paragraph-font-size, 1.2rem); /* Slightly smaller font */
+  }
 }
 
 .content img {
-    width: 20%; /* Make image take a percentage of the width */
-    max-width: 300px; /* Prevent images from growing too large */
-    height: auto;
-    border-radius: 5px; /* Optional: Add rounded corners */
+  width: auto;
+  max-width: 400px;
+  height: auto;
+  border-radius: 5px;
 }
 
-hr {
-    margin: 2rem 0;
-    border: none;
-    border-top: 2px solid #166D95;
+/* Mobile adjustments for images */
+@media (max-width: 768px) {
+  .content img {
+    max-width: 100%; /* Make images take full width on mobile */
+    height: auto;
+  }
+}
+
+.leadership-container hr {
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid #ffff;
+  width: 80%;
+  margin-left: 20px; /* Maintain desktop margin */
+}
+
+/* Mobile adjustments for hr */
+@media (max-width: 768px) {
+  hr {
+    width: 80%; /* Make hr take more width on mobile */
+    margin-left: auto; /* Center the line */
+    margin-right: auto;
+  }
 }
 
 .boni {
-    margin-top: 2rem;
+  margin-top: 2rem;
+}
+hr {
+  margin: 2rem 0;
+  border: none;
+  border-top: 2px solid #166D95;
 }
 
+
 .boni-text-button {
-    display: flex;
-    align-items: center; /* Vertically align text and button */
-    justify-content: space-between; /* Space paragraph and button apart */
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .boni-text-button p {
-    margin: 0;
-    font-size: 1.5rem; /* Adjust font size */
-    text-align: left; /* Align text to the left */
-    flex: 1; /* Allow paragraph to take up remaining space */
+  margin: 0;
+  font-size: var(--boni-paragraph-font-size, 1.5rem);
+  text-align: left;
+  flex: 1;
+  margin-right: -100px; /* Maintain desktop margin */
+}
+
+/* Mobile adjustments for boni-text-button */
+@media (max-width: 768px) {
+  .boni-text-button {
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .boni-text-button p {
+    margin-right: 0; /* Remove fixed margin for mobile */
+    text-align: center; /* Center text on mobile */
+  }
 }
 
 .boni-text-button button {
-    background-color: white; /* White background for the button */
-    color: #166D95; /* Bluish text */
-    border: 2px solid #166D95; /* Bluish border */
-    padding: 0.75rem 1.5rem;
-    font-size: 1.5rem; /* Adjust font size for the button */
-    cursor: pointer;
-    border-radius: 5px; /* Rounded corners */
+  background-color: white;
+  color: #166D95;
+  border: 1px solid #166D95;
+  padding: 0.75rem 1.5rem;
+  font-size: var(--button-font-size, 1.5rem);
+  cursor: pointer;
+  border-radius: 8px; /* Smooth, rounded corners */
+  margin-right: 460px; /* Maintain desktop margin */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Optional: Add hover effect for better interaction */
+.boni-text-button button:hover {
+  background-color: #166D95;
+  color: white;
+}
+
+
+/* Mobile adjustments for button */
+@media (max-width: 768px) {
+  .boni-text-button button {
+    margin-right: 0; /* Remove fixed margin for mobile */
+    width: auto; /* Let button size adjust naturally */
+  }
 }
 
 button:hover {
-    background-color: #166D95; /* Bluish background on hover */
-    color: white; /* White text on hover */
+  background-color: #166D95;
+  color: white;
 }
 
-/* Responsive styles */
-@media (max-width: 1024px) {
-    h1 {
-        font-size: 2.5rem; /* Reduce title font size on smaller screens */
-    }
 
-    .content p {
-        font-size: 1.4rem; /* Adjust paragraph font size */
-    }
 
-    .content img {
-        width: 25%; /* Adjust image size for medium screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .content {
-        flex-direction: column; /* Stack text and image vertically */
-        align-items: center; /* Center stacked items */
-    }
-
-    .content img {
-        width: 40%; /* Further reduce image size for smaller screens */
-    }
-
-    .boni-text-button {
-        flex-direction: column; /* Stack text and button vertically */
-        align-items: stretch;
-    }
-
-    .boni-text-button button {
-        width: 100%; /* Full-width button for smaller screens */
-        margin-top: 1rem;
-    }
-
-    button {
-        font-size: 1.2rem; /* Adjust font size for smaller screens */
-    }
-}
 
 /* Leadership Container */
 .leadership-container {
   position: relative; /* Keeps it relative to the parent container */
-  height: 70vh;
+  height: 100vh;
   background: url('img/blue.png') no-repeat center center, #123456; /* Fallback color for low-res images */
   background-size: cover; /* Ensures the background covers the container */
   display: flex;
@@ -354,11 +515,17 @@ button:hover {
   z-index: 0; /* Places it behind content */
 }
 
+
 .leadership-container > * {
   position: relative; /* Ensures content is above the overlay */
   z-index: 1;
 }
 
+.title {
+  font-size: 67px;
+  color: #ffff;
+
+}
 /* Overlay container adjustments */
 .overlay {
   text-align: center;
@@ -377,9 +544,10 @@ button:hover {
   position: absolute; /* Ensures it spans the entire page */
   left: 0; /* Aligns it to the left edge */
   width: 100%; /* Covers the full width of the page */
-  height: 2px;
-  background-color: white;
+  height: 0.4px;
+  background-color: #ffff;
   margin: 0; /* Removes extra spacing */
+  margin-top: -10px;
 }
 
 /* Content container */
@@ -392,11 +560,10 @@ button:hover {
   gap: 1rem; /* Adds space between items */
 }
 
-/* Call-to-action button */
 .learn-more {
   background: transparent;
   color: white;
-  border: 2px solid white;
+  border: 0.1px solid white;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
@@ -405,24 +572,29 @@ button:hover {
   max-width: 200px;
   text-transform: uppercase; /* Uniform button text style */
   transition: background 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+  margin-top: 20px;
+  border-radius: 8px; /* Smooth corners without making the button oval */
 }
+
 
 .learn-more:hover {
   background: white;
   color: black;
 }
 
-/* Description text */
+//* Description text */
 .description {
-  max-width: 70%;
+  max-width: 100%;
   text-align: justify;
-  line-height: 1.6;
+  line-height: 0.6;
   font-size: 1.1rem; /* Slightly increased font size */
   margin: 0;
   color: #e0e0e0; /* Softer white for readability */
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
   flex: 3 1 auto; /* Makes it flexible and responsive */
+  word-spacing: normal; /* Ensures normal word spacing */
 }
+
 
 /* Fix overlapping for .content and .right */
 .content {
@@ -431,63 +603,13 @@ button:hover {
 }
 
 .right {
-  font-size: 1.5em;
+  font-size: 0.5em;
   text-align: right;
   position: relative; /* Removed absolute positioning */
   right: 0; /* Aligns it properly */
 }
 
-/* Media Queries for Responsiveness */
 
-/* For tablets and smaller desktops */
-@media (max-width: 768px) {
-  .title {
-    font-size: 2.5rem; /* Adjusted title size */
-  }
-
-  .content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .description {
-    max-width: 100%;
-  }
-
-  .learn-more {
-    max-width: 100%;
-  }
-
-  .leadership-container {
-    background-size: contain; /* Adjust background size for smaller screens */
-  }
-}
-
-/* For mobile devices */
-@media (max-width: 480px) {
-  .title {
-    font-size: 2rem; /* Smaller title size for mobile */
-  }
-
-  .white-line {
-    margin: 0.5rem 0;
-  }
-
-  .description {
-    font-size: 0.95rem;
-  }
-
-  .learn-more {
-    font-size: 0.9rem;
-    padding: 0.5rem;
-  }
-}
-
-
-
-
-
-/* CSS Code */
 .raison-container {
   text-align: center; /* Centers the text horizontally */
   margin: 20px auto;
@@ -512,7 +634,7 @@ button:hover {
 .values-content {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Aligns text on the same plane */
+  align-items: flex-end; /* Aligns text on the same plane */
   flex-wrap: wrap; /* Ensures content wraps on smaller screens */
   gap: 20px; /* Adds space between elements */
 }
@@ -523,20 +645,60 @@ button:hover {
   text-align: left;
   flex-basis: 100%; /* Ensures "Our values" spans the width */
   position: relative; /* For line placement */
+  margin-left: 310px;
+  font-size: 12px;
 }
-
 
 .values-content .values-paragraph {
   color: #166D95;
-  text-align: right; /* Aligns paragraph text to the left */
+  text-align: justify; /* Aligns paragraph text to the left */
   flex-basis: 100%; /* Ensures paragraphs are below "Our values" */
   font-size: 25px;
   text-indent: 5px;
+  margin-left: 500px;
 }
 
 .values-content .right-paragraph {
   margin-top: 20px; /* Adds spacing between elements */
 }
+
+/* Responsive Design for Tablets */
+@media screen and (max-width: 1024px) {
+  .values-content .values-header {
+    margin-left: 50px;
+    font-size: 16px;
+  }
+
+  .values-content .values-paragraph {
+    margin-left: 50px;
+    font-size: 20px;
+  }
+}
+
+/* Responsive Design for Mobile Devices */
+@media screen and (max-width: 768px) {
+  .values-content {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;    /* Center align content */
+  }
+
+  .values-content .values-header,
+  .values-content .values-paragraph {
+    margin-left: 0;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .values-content .values-paragraph {
+    text-align: justify;
+    font-size: 16px;
+  }
+
+  .raison-container .raison-header {
+    font-size: 2em;
+  }
+}
+
 
 /* Banner container */
 #innovation-banner {
