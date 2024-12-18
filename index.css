@@ -1,12 +1,4 @@
-/* General link styles */
-a {
-  text-decoration: none;
-  color: black;
-}
 
-a:hover {
-  text-decoration: underline;
-}
 
 /* Navigation */
 nav {
@@ -28,6 +20,7 @@ nav a {
   padding: 0 16px;
   color: white;
   transition: 0.4s;
+  text-decoration: none;
 }
 
 nav a:hover {
@@ -42,6 +35,26 @@ nav ul {
   flex-wrap: wrap;
 }
 
+/* Navigation */
+.language-toggle {
+  color: white;
+  font-size: 12px; /* Smaller text */
+  cursor: pointer;
+  border: 1px solid white;
+  padding: 2px 6px; /* Compact padding */
+  transition: 0.3s;
+  text-align: center;
+  border-radius: 4px;
+  margin-left: 8px; /* Spacing from previous menu item */
+  line-height: 1; /* Ensures smaller overall height */
+}
+
+.language-toggle:hover {
+  color: #166D95;
+  border-color: #166D95;
+}
+
+
 /* Logo */
 #logo-img {
   display: flex;
@@ -50,8 +63,8 @@ nav ul {
 }
 
 #logo-img img {
-  height: 50px;
-  width: auto;
+  height: 100px;
+  width: 300px;
 }
 
 /* Menu Icon */
@@ -110,6 +123,7 @@ nav ul {
 /* Banner */
 #banner {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -117,8 +131,41 @@ nav ul {
   background-size: cover;
   color: white;
   text-align: center;
+  position: relative;
   z-index: 50;
 }
+
+#banner h1 {
+  font-size: 77px;
+  margin: 0;
+  font-weight: bold;
+  color: white; /* Keeps the text fully white */
+  -webkit-text-stroke: 2px black; /* Adds a black border around the text */
+  text-stroke: 2px black; /* Non-webkit fallback for the border */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Subtle glow effect for better readability */
+  background: none; /* Ensures no background color or box */
+}
+
+
+
+#bottom-left {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
+
+#bottom-right {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
+
 
 /* Ensure banner and other content don't overlap the menu */
 html, body {
@@ -164,21 +211,40 @@ main, footer {
 }
 
 /* About Us Section Styling */
-#Title_session {
+#title-section {
   color: #166D95;
   background-color: #FFFFFF;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left; /* Aligns everything to the right */
   padding: 20px;
   box-sizing: border-box;
 }
 
+#title-section h2 {
+  font-size: 14px; /* Adjust font size as needed */
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end; /* Aligns the line and text to the right */
+  color: #166D95;
+  margin: 0;
+}
+
+#title-section .line {
+  display: inline-block;
+  width: 25px; /* Reduced length of the line */
+  height: 0.5px; /* Reduced thickness of the line */
+  background-color: #166D95; /* Line color */
+  margin-right: 10px; /* Space between the line and the text */
+}
+
+
 #Frame_36 {
   background-color: #FFFFFF;
   color: #166D95;
-  font-size: 16px;
+  font-size: 66px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -198,7 +264,7 @@ main, footer {
   left: 50%;
   width: 80%;
   max-width: 800px;
-  height: 4px;
+  height: 1px;
   background-color: #166D95;
   transform: translateX(-50%);
 }
@@ -252,13 +318,37 @@ main, footer {
 #iframe37 {
   color: #166D95;
   background: #FFFFFF;
-  width: 100%;
-  max-width: 1200px;
-  height: auto;
-  min-height: 200px;
-  padding: 20px;
-  box-sizing: border-box;
-  margin: 0 auto;
+  width: 90%; /* Adjusts width to a more responsive size */
+  max-width: 1200px; /* Ensures it doesn’t exceed the specified width */
+  height: auto; /* Automatically adjusts to fit content */
+  font-size: 16px; /* Sets font size */
+  padding: 20px; /* Adds space around text */
+  box-sizing: border-box; /* Includes padding in dimensions */
+  display: flex; /* Enables flexbox */
+  flex-direction: column; /* Ensures child elements are stacked vertically */
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+  margin: 20px auto; /* Centers div horizontally and adds spacing */
+  text-align: center; /* Centers text horizontally */
+  position: relative; /* Ensures the blue-box is positioned relative to this container */
+}
+
+/* Paragraph Styling */
+#iframe37 p {
+  text-align: justify; /* Justifies the text in the paragraph */
+  margin: 10px 0; /* Adds spacing around the paragraph */
+  line-height: 1.6; /* Improves readability with better line spacing */
+}
+
+/* Blue Box Styling */
+.blue-box {
+  background-color: #166D95;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
 /* Responsive Styling */
@@ -278,43 +368,24 @@ main, footer {
 }
 
 
-
-
-
-#iframe37 {
-  color: #166D95;
-  background: #FFFFFF;
-  width: 90%; /* Adjusts width to a more responsive size */
-  max-width: 3728px; /* Ensures it doesn’t exceed the specified width */
-  height: auto; /* Automatically adjusts to fit content */
-  font-size: 16px; /* Sets font size */
-  padding: 20px; /* Adds space around text */
-  box-sizing: border-box; /* Includes padding in dimensions */
-  display: flex; /* Enables flexbox */
-  justify-content: center; /* Centers text horizontally */
-  align-items: center; /* Centers text vertically */
-  margin: 20px auto; /* Centers div horizontally and adds spacing */
-  text-align: center; /* Ensures multiline text is centered */
-  position: relative; /* Ensures the blue-box is positioned relative to this container */
-}
-
 .blue-box {
   position: absolute;
   top: 10px; /* Position from the top */
   right: 10px; /* Position from the right */
-  border: 2px solid #166D95; /* Border color set to #166D95 */
+  border: 0.5px solid #166D95; /* Border color set to #166D95 */
   padding: 5px 10px;
   font-size: 16px;
   background: #FFFFFF; /* Ensures contrast */
   color: #166D95; /* Text color set to #166D95 */
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 10px; /* Smooth, non-oval rounded corners */
   text-align: right; /* Ensures text is aligned to the right */
   z-index: 1; /* Ensures the box stays on top */
 }
 
+
 .content {
   margin-top: 40px; /* Adds space below the blue box to avoid overlap */
-  text-align: center;
+  text-align: justify;
 }
 
 
@@ -327,52 +398,60 @@ main, footer {
   height: auto; /* Adjusts height automatically */
   padding: 20px;
   box-sizing: border-box;
-  font-size: 55px;
+  font-size: 65px;
+  text-align: left;
 }
 
 #iframe38::after {
   content: ''; /* Creates an empty content box */
-  position: absolute;
-  bottom: 0; /* Positions the line at the bottom */
-  left: 0;
-  width: 100%; /* Makes the line span the full width */
-  height: 2px; /* Thickness of the line */
+  position: absolute; /* Positions it relative to its container */
+  bottom: 0; /* Aligns the line to the bottom of the container */
+  left: 50%; /* Start positioning from the center of the container */
+  transform: translateX(-50%); /* Moves the line back by half its width to center it */
+  width: 80%; /* Spans the full width of the container */
+  height: 1px; /* Thickness of the line */
   background-color: #166D95; /* Blue color */
+  display: block; /* Ensures the pseudo-element behaves like a block */
+  align-items: center;
 }
 #iframe39 {
   display: flex; /* Enables flexbox layout */
   justify-content: space-between; /* Positions left and right elements on opposite sides */
-  align-items: left; /* Aligns items vertically on the same plane */
+  align-items: flex-start; /* Aligns items at the top */
   font-size: 18px; /* Sets the default font size */
   color: #166D95; /* Sets the default text color */
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allows wrapping for responsive design */
+  width: 100%; /* Sets the width of the parent container */
+}
+
+h2 {
+  display: flex; /* Enables flexbox for the heading */
+  align-items: center; /* Vertically centers the line and text */
+  font-size: 24px; /* Adjusts the font size of the heading */
+  color: #166D95; /* Matches the color scheme */
+}
+
+h2 .line {
+  content: "";
+  display: inline-block;
+  width: 40px; /* Adjust the length of the line */
+  height: 1px; /* Thickness of the line */
+  background-color: #166D95; /* Matches the text color */
+  margin-right: 10px; /* Adds space between the line and the text */
 }
 
 .left-text, .right-text {
-  min-width: 100px; /* adjust the minimum width to your liking */
-  box-sizing: border-box; /* switch to border-box */
-  display: inline-block; /* switch to inline-block */
-}
-
-#iframe39 {
-  width: 100%; /* add width to the parent container */
+  min-width: 100px; /* Adjusts the minimum width */
+  box-sizing: border-box; /* Includes padding and border in width/height */
+  display: inline-block; /* Keeps the text inline */
 }
 
 
-
-#iframe40 {
-  display: flex; /* Align items horizontally */
-  align-items: center; /* Vertically align items */
-  gap: 15px; /* Adds space between the image and text */
-  font-family: Arial, sans-serif; /* Sets a clean font */
-  color: #333; /* Sets text color */
-  position: relative;
-}
 
 
 .cursor-tracker {
   position: absolute;
-  background-color: #3F9909;
+  background-color: #9ebd8b;
   color: white;
   padding: 10px 15px;
   border-radius: 50%;
@@ -641,7 +720,7 @@ main, footer {
   animation: slideUp 3s ease-in-out infinite; /* Add the sliding animation */
 }
 
-/* Text overlay on the image */
+/* Text overlay at the center of the image */
 .innovation-banner-txt {
   position: absolute; /* Position the text over the image */
   top: 50%; /* Center vertically */
@@ -656,16 +735,48 @@ main, footer {
   z-index: 1; /* Ensure text is above the image */
 }
 
+/* Left-aligned text at the bottom-left */
+.innovation-banner-left-txt {
+  position: absolute; /* Position text */
+  bottom: 20px; /* Position above the bottom edge */
+  left: 20px; /* Align to the left */
+  color: white; /* White text color */
+  font-size: 18px; /* Adjust font size as needed */
+  font-weight: bold; /* Emphasize text */
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
+}
+
+/* Right-aligned and justified text at the bottom-right */
+.innovation-banner-right-txt {
+  position: absolute; /* Position text */
+  bottom: 20px; /* Position above the bottom edge */
+  right: 20px; /* Align to the right */
+  color: white; /* White text color */
+  font-size: 16px; /* Adjust font size as needed */
+  text-align: justify; /* Justify the text */
+  max-width: 300px; /* Optional: limit the width */
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
+}
+
+
 /* Responsive font sizes */
 @media (max-width: 768px) {
   .innovation-banner-txt {
     font-size: 30px; /* Adjust font size for smaller screens */
+  }
+  .innovation-banner-left-txt,
+  .innovation-banner-right-txt {
+    font-size: 14px; /* Adjust font size for smaller screens */
   }
 }
 
 @media (max-width: 480px) {
   .innovation-banner-txt {
     font-size: 20px; /* Further adjust for very small screens */
+  }
+  .innovation-banner-left-txt,
+  .innovation-banner-right-txt {
+    font-size: 12px; /* Further adjust for very small screens */
   }
 }
 
@@ -691,11 +802,11 @@ main, footer {
   padding-bottom: 20px; /* Optional: padding for extra space */
 }
 
-
 .innovation-section {
   position: relative; /* Ensure proper stacking */
   z-index: 1; /* Ensure it's not above other content */
 }
+
 
 /* General Footer Styles */
 footer {
@@ -776,7 +887,8 @@ footer {
 
 .footer-links h2 {
   font-size: 1.125rem; /* Use relative font sizes */
-  text-decoration: underline;
+  text-decoration: none;
+  color: #FFFFFF;
 }
 
 .footer-links ul {
