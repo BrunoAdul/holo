@@ -1,4 +1,17 @@
-* General link styles */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Prevent Horizontal Scrolling */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* General link styles */
 a {
   text-decoration: none;
   color: black;
@@ -110,6 +123,7 @@ nav ul {
 /* Banner */
 #banner {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -117,51 +131,104 @@ nav ul {
   background-size: cover;
   color: white;
   text-align: center;
+  position: relative;
   z-index: 50;
-}
-
-/* Ensure banner and other content don't overlap the menu */
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
   width: 100%;
 }
 
-main, footer {
-  z-index: 10;
-  position: relative;
+#banner h1 {
+  font-size: 77px;
+  margin: 0;
+  font-weight: bold;
+  color: white;
+  -webkit-text-stroke: 2px white;
+  text-stroke: 2px white;
+  background: none;
+}
+
+/* Navigation Container */
+#navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Home Link */
+#home-link {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#home-link a {
+  color: white;
+  text-decoration: none;
+}
+
+#home-link a:hover {
+  text-decoration: underline;
+}
+
+.arrow-left {
+  font-size: 11px;
+  margin-right: 5px;
+}
+
+/* Horizontal Line */
+.horizontal-line {
+  flex-grow: 1;
+  height: 1px;
+  background: white;
+  margin: 0 20px;
+}
+
+/* Scroll to Explore Text */
+#scroll-text {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+#scroll-text .arrow-right {
+  font-size: 11px;
+  margin-left: 5px;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .desktop-menu {
+  nav ul {
     display: none;
   }
 
   #menu-icon {
-    display: flex;
+    display: block;
   }
 
-  nav ul {
-    flex-wrap: wrap;
+  #banner h1 {
+    font-size: 50px;
+  }
+
+  #navigation {
+    flex-direction: column;
+    bottom: 10px;
+  }
+
+  #home-link,
+  #scroll-text {
+    margin-bottom: 10px;
+  }
+
+  .horizontal-line {
+    margin: 10px 0;
   }
 }
 
-@media (max-width: 480px) {
-  #logo-img img {
-    height: 40px;
-  }
 
-  #slideout-menu a {
-    font-size: 18px;
-  }
-
-  #banner {
-    background-position: center;
-    background-size: cover;
-  }
-}
 
 
 
