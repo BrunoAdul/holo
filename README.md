@@ -22,8 +22,7 @@ This project focuses on converting Figma designs into functional web pages using
    cd holo
    ```
 2. Open `index.html` in a web browser.
-3. Modify `style.css` for styling adjustments.
-4. Use `script.js` to add JavaScript functionalities.
+3. Modify to suit your needs
 
 ## Future Enhancements
 - Automate the Figma to code conversion process.
