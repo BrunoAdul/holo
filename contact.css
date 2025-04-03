@@ -223,55 +223,119 @@ a {
     .contact-container {
         display: flex;
         flex-wrap: wrap;
-        width: 80%;
+        width: 90%;
+        max-width: 1200px;
         margin: 20px auto;
+        gap: 30px;
       }
-      
-      .contact-info {
-        flex: 1;
+
+      .text-block {
+        flex: 1 1 300px;
         margin-right: 20px;
       }
-      
+
       .contact-form {
-        flex: 2;
+        flex: 2 1 500px;
       }
-      
+
       /* Form styles */
-      .contact-form form {
+      .contact-form {
         display: flex;
         flex-direction: column;
+        gap: 20px;
       }
-      
+
       .form-row {
         display: flex;
-        flex-direction: column;
+        gap: 15px;
         margin-bottom: 15px;
       }
-      
-      label {
-        margin-bottom: 5px;
-        font-size: 14px;
+
+      .message-row {
+        flex-direction: column;
       }
-      
-      input {
-        padding: 8px;
+
+      label {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5px;
+        font-size: 16px;
+        flex: 1;
+        color: #166D95;
+      }
+
+      input, textarea {
+        padding: 10px;
         border: 1px solid #166D95;
         border-radius: 4px;
-        font-size: 14px;
+        font-size: 16px;
+        margin-top: 5px;
+        width: 100%;
+        box-sizing: border-box;
       }
-      
-      .submit-btn {
+
+      textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .contact-form button {
         background-color: #166D95;
         color: white;
-        padding: 10px 15px;
+        padding: 12px 24px;
         border: none;
         border-radius: 4px;
         cursor: pointer;
-        font-size: 14px;
+        font-size: 16px;
+        align-self: flex-start;
+        transition: background-color 0.3s;
       }
-      
-      .submit-btn:hover {
+
+      .contact-form button:hover {
         background-color: #125a75;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .contact-container {
+          width: 95%;
+          gap: 20px;
+        }
+
+        .text-block {
+          margin-right: 0;
+          text-align: left;
+        }
+
+        .form-row {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        label {
+          font-size: 14px;
+        }
+
+        input, textarea, .contact-form button {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .contact-container {
+          width: 100%;
+          padding: 0 15px;
+          box-sizing: border-box;
+        }
+
+        .text-block div {
+          margin-bottom: 10px;
+        }
+
+        .contact-form button {
+          width: 100%;
+        }
       }
 
 

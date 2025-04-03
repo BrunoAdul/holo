@@ -1,0 +1,255 @@
+/* Responsive CSS for all pages */
+
+/* Base responsive styles */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Container responsiveness */
+.container, 
+.contact-container, 
+#Title_session, 
+#Frame_36, 
+#Frame_36en, 
+#iframe37, 
+#iframe38, 
+#iframe39, 
+#iframe40 {
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Form responsiveness */
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.contact-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Text responsiveness */
+.paragraph-container p {
+  max-width: 100%;
+}
+
+/* Button responsiveness */
+.donation-button, 
+.contact-form button, 
+.submit-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Footer responsiveness */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  /* Navigation */
+  .desktop-menu {
+    display: none;
+  }
+  
+  #menu-icon {
+    display: flex !important;
+  }
+  
+  /* Form adjustments */
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Text size adjustments */
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  /* Container width */
+  .container, 
+  .contact-container, 
+  #Title_session, 
+  #Frame_36, 
+  #Frame_36en, 
+  #iframe37, 
+  #iframe38, 
+  #iframe39, 
+  #iframe40 {
+    width: 95%;
+  }
+  
+  /* Footer adjustments */
+  .footer-title {
+    font-size: 1.8rem;
+  }
+  
+  .footer-links {
+    gap: 20px;
+  }
+  
+  /* Banner adjustments */
+  #banner {
+    height: 70vh;
+  }
+  
+  /* Special elements */
+  .innovative-public-health:hover {
+    transform: translateX(150px) translateY(0px);
+  }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 480px) {
+  /* Text size adjustments */
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+  }
+  
+  p {
+    font-size: 0.9rem;
+  }
+  
+  /* Container width */
+  .container, 
+  .contact-container, 
+  #Title_session, 
+  #Frame_36, 
+  #Frame_36en, 
+  #iframe37, 
+  #iframe38, 
+  #iframe39, 
+  #iframe40 {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  /* Button adjustments */
+  .donation-button, 
+  .contact-form button, 
+  .submit-btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Footer adjustments */
+  .footer-title {
+    font-size: 1.5rem;
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Banner adjustments */
+  #banner {
+    height: 50vh;
+  }
+  
+  /* Special elements */
+  .innovative-public-health:hover {
+    transform: translateX(50px) translateY(0px);
+  }
+  
+  /* Contact form */
+  .text-block {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Navigation */
+  #logo-img img {
+    height: 35px;
+  }
+  
+  #slideout-menu a {
+    font-size: 16px;
+  }
+}
+
+/* Fix for contact form on mobile */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  
+  .text-block {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .message-row {
+    flex-direction: column;
+  }
+}
+
+/* Fix for multiple trackers */
+.tracker {
+  pointer-events: none;
+}
+
+/* Fix for footer on small screens */
+@media (max-width: 480px) {
+  .footer-header {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+}
